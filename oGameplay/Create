@@ -1,0 +1,22 @@
+//Collision
+var arr = oData.groundArray;
+var count = 0;
+
+for (var i = 0; i < array_length(arr); ++i) {
+	for (var n = 0; n < array_length(arr[i]); ++n) {
+		var t = arr[i,n].tile;
+		if ((t == sCliff) || (t == sWater)) collisionArray[count] = instance_create_layer(coorToTile(n),coorToTile(i),oInitialise.gameplayLayer,oCollision);
+		count++;
+	}
+}
+
+
+var arr = oData.objectArray;
+
+for (var i = 0; i < array_length(arr); ++i) {
+	for (var n = 0; n < array_length(arr[i]); ++n) {
+		if (arr[i,n].tile == sFencing) collisionArray[count] = instance_create_layer(coorToTile(n),coorToTile(i),oInitialise.gameplayLayer,oCollision);
+		count++;
+	}
+}
+
